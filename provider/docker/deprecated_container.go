@@ -94,7 +94,8 @@ func hasLoadBalancerLabelV1(container dockerData) bool {
 	sticky := label.Has(container.Labels, label.TraefikBackendLoadBalancerSticky)
 	stickiness := label.Has(container.Labels, label.TraefikBackendLoadBalancerStickiness)
 	cookieName := label.Has(container.Labels, label.TraefikBackendLoadBalancerStickinessCookieName)
-	return method || sticky || stickiness || cookieName
+	headerName := label.Has(container.Labels, label.TraefikBackendLoadBalancerStickinessHeaderName)
+	return method || sticky || stickiness || cookieName || headerName
 }
 
 // Deprecated

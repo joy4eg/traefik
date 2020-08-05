@@ -51,6 +51,7 @@ type LoadBalancer struct {
 
 // Stickiness holds sticky session configuration.
 type Stickiness struct {
+	HeaderName string `json:"headerName,omitempty"`
 	CookieName string `json:"cookieName,omitempty"`
 	Secure     bool   `json:"secure,omitempty"`
 	HTTPOnly   bool   `json:"httpOnly,omitempty"`

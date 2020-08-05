@@ -56,6 +56,19 @@ func TestConfigureBackends(t *testing.T) {
 			lb:             nil,
 			expectedMethod: defaultMethod,
 		},
+		{
+			desc: "valid load balancer method with sticky enabled by header",
+			lb: &types.LoadBalancer{
+				Method: validMethod,
+				Stickiness: &types.Stickiness{
+					HeaderName: "x-header",
+				},
+			},
+			expectedMethod: validMethod,
+			expectedStickiness: &types.Stickiness{
+				HeaderName: "x-header",
+			},
+		},
 	}
 
 	for _, test := range testCases {

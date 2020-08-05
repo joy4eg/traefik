@@ -26,6 +26,7 @@ const (
 	SuffixBackendLoadBalancerSticky                            = SuffixBackendLoadBalancer + ".sticky"
 	SuffixBackendLoadBalancerStickiness                        = SuffixBackendLoadBalancer + ".stickiness"
 	SuffixBackendLoadBalancerStickinessCookieName              = SuffixBackendLoadBalancer + ".stickiness.cookieName"
+	SuffixBackendLoadBalancerStickinessHeaderName              = SuffixBackendLoadBalancer + ".stickiness.headerName"
 	SuffixBackendLoadBalancerStickinessSecure                  = SuffixBackendLoadBalancer + ".stickiness.secure"
 	SuffixBackendLoadBalancerStickinessCHTTPOnly               = SuffixBackendLoadBalancer + ".stickiness.httpOnly"
 	SuffixBackendLoadBalancerStickinessSameSite                = SuffixBackendLoadBalancer + ".stickiness.sameSite"
@@ -141,6 +142,7 @@ const (
 	TraefikBackendLoadBalancerSticky                           = Prefix + SuffixBackendLoadBalancerSticky
 	TraefikBackendLoadBalancerStickiness                       = Prefix + SuffixBackendLoadBalancerStickiness
 	TraefikBackendLoadBalancerStickinessCookieName             = Prefix + SuffixBackendLoadBalancerStickinessCookieName
+	TraefikBackendLoadBalancerStickinessHeaderName             = Prefix + SuffixBackendLoadBalancerStickinessHeaderName
 	// FIXME
 	TraefikBackendLoadBalancerStickinessSecure   = Prefix + SuffixBackendLoadBalancerStickinessSecure
 	TraefikBackendLoadBalancerStickinessHTTPOnly = Prefix + SuffixBackendLoadBalancerStickinessCHTTPOnly
